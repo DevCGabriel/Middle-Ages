@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Main.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #7a7e85;}
+.s1 { color: #bcbec4;}
+.s2 { color: #cf8e6d;}
+.s3 { color: #bcbec4;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">//TIP To &lt;b&gt;Run&lt;/b&gt; code, press &lt;shortcut actionId=&quot;Run&quot;/&gt; or</span>
+<span class="s0">// click the &lt;icon src=&quot;AllIcons.Actions.Execute&quot;/&gt; icon in the gutter.</span>
+<span class="s2">fun </span><span class="s1">main</span><span class="s3">() {</span>
+    <span class="s0">// Lista que armazenará as idades colocadas pelo usuário</span>
+    <span class="s2">val </span><span class="s1">idades </span><span class="s3">= </span><span class="s1">mutableListOf</span><span class="s3">&lt;</span><span class="s1">Int</span><span class="s3">&gt;()</span>
+
+    <span class="s0">// Loop para receber idades do usuário</span>
+    <span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Digite as idades (digite -1 para terminar):&quot;</span><span class="s3">)</span>
+    <span class="s2">while </span><span class="s3">(</span><span class="s2">true</span><span class="s3">){</span>
+            <span class="s2">val </span><span class="s1">input </span><span class="s3">= </span><span class="s1">readLine</span><span class="s3">()</span><span class="s1">?</span><span class="s3">.</span><span class="s1">toIntOrNull</span><span class="s3">()</span>
+            <span class="s2">if </span><span class="s3">(</span><span class="s1">input </span><span class="s3">!= </span><span class="s2">null </span><span class="s3">&amp;&amp; </span><span class="s1">input </span><span class="s3">&gt;= </span><span class="s5">0</span><span class="s3">) {</span>
+                <span class="s1">idades</span><span class="s3">.</span><span class="s1">add</span><span class="s3">(</span><span class="s1">input</span><span class="s3">)</span>
+
+            <span class="s3">}</span><span class="s2">else if </span><span class="s3">(</span><span class="s1">input </span><span class="s3">== -</span><span class="s5">1</span><span class="s3">) {</span>
+                <span class="s2">break</span>
+
+            <span class="s3">}</span><span class="s2">else </span><span class="s3">{</span>
+                <span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Por favor, insira uma idade válida&quot;</span><span class="s3">)</span>
+            <span class="s3">}</span>
+    <span class="s3">}</span>
+
+    <span class="s2">if </span><span class="s3">(</span><span class="s1">idades</span><span class="s3">.</span><span class="s1">isNotEmpty</span><span class="s3">()){</span>
+        <span class="s2">val </span><span class="s1">soma </span><span class="s3">= </span><span class="s1">idades</span><span class="s3">.</span><span class="s1">sum</span><span class="s3">()</span>
+        <span class="s2">val </span><span class="s1">media </span><span class="s3">= </span><span class="s1">soma</span><span class="s3">.</span><span class="s1">toDouble</span><span class="s3">() / </span><span class="s1">idades</span><span class="s3">.</span><span class="s1">size</span>
+
+
+        <span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;As idade inseridas foram </span><span class="s2">$</span><span class="s1">idades</span><span class="s4">&quot;</span><span class="s3">)</span>
+        <span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;A média das idades é: </span><span class="s2">$</span><span class="s1">media</span><span class="s4">&quot;</span><span class="s3">)</span>
+
+
+
+    <span class="s3">} </span><span class="s2">else </span><span class="s3">{</span>
+        <span class="s1">println</span><span class="s3">(</span><span class="s4">&quot;Nenhuma idade foi inserida. &quot;</span><span class="s3">)</span>
+    <span class="s3">}</span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="s3">}</span>
+
+</pre>
+</body>
+</html>
